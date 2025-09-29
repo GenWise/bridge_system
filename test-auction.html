@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-column Auction Table Test</title>
+    <style>
+        /* Copy relevant styles from styles.css */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            padding: 2rem;
+        }
+
+        /* Multi-column Auction Table - PDF matching format */
+        .auction-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            border: 2px solid #374151;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .auction-table .auction-header {
+            background: #f9fafb;
+            font-weight: 600;
+            color: #374151;
+            border-bottom: 2px solid #374151;
+        }
+
+        .auction-table .auction-title {
+            padding: 0.75rem 0.9rem;
+            text-align: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .auction-table .auction-cell {
+            padding: 0.5rem 0.7rem;
+            text-align: center;
+            border-right: 1px solid #6b7280;
+            border-bottom: 1px solid #6b7280;
+            vertical-align: middle;
+            line-height: 1.4;
+            min-width: 80px;
+        }
+
+        .auction-table .auction-cell:last-child {
+            border-right: none;
+        }
+
+        .auction-table tr:last-child .auction-cell {
+            border-bottom: none;
+        }
+
+        /* Auction table cell styling - Opener BLUE, Responder GREEN */
+        .auction-table .opener-cell {
+            background-color: #dbeafe !important;
+            color: #1e40af !important;
+            font-weight: bold;
+        }
+
+        .auction-table .responder-cell {
+            background-color: #d1fae5 !important;
+            color: #065f46 !important;
+            font-weight: bold;
+        }
+
+        .auction-table .description-cell {
+            background-color: #ffffff;
+            color: #1f2937;
+            text-align: left;
+            font-weight: normal;
+            min-width: 200px;
+        }
+
+        .auction-table .empty-cell {
+            background-color: #ffffff;
+            color: transparent;
+            min-width: 60px;
+        }
+
+        /* Bridge Suits */
+        .suit {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .spades { color: #000; }
+        .hearts { color: #dc2626; }
+        .diamonds { color: #dc2626; }
+        .clubs { color: #000; }
+    </style>
+</head>
+<body>
+    <h1>Multi-Column Auction Table Test</h1>
+    <p>This demonstrates the new multi-column auction table format as required from PDF pages 4-12.</p>
+
+    <h2>Example: 1♣1♦1NT Sequence</h2>
+
+    <table class="auction-table">
+        <tr class="auction-header">
+            <td colspan="10" class="auction-title">1♣1♦1NT?</td>
+        </tr>
+        <tr class="auction-row">
+            <td class="auction-cell responder-cell">Pass</td>
+            <td class="auction-cell description-cell">to play</td>
+        </tr>
+        <tr class="auction-row">
+            <td class="auction-cell responder-cell">2<span class="suit clubs">♣</span></td>
+            <td class="auction-cell description-cell">Puppet to 2<span class="suit diamonds">♦</span></td>
+        </tr>
+        <tr class="auction-row">
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell opener-cell">2<span class="suit diamonds">♦</span></td>
+            <td class="auction-cell description-cell">Puppetted bid</td>
+        </tr>
+        <tr class="auction-row">
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell responder-cell">Pass</td>
+            <td class="auction-cell description-cell">to play</td>
+        </tr>
+        <tr class="auction-row">
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell responder-cell">2M</td>
+            <td class="auction-cell description-cell">5+<span class="suit diamonds">♦</span>, 4M, inv</td>
+        </tr>
+        <tr class="auction-row">
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell empty-cell"></td>
+            <td class="auction-cell responder-cell">2NT</td>
+            <td class="auction-cell description-cell">inv</td>
+        </tr>
+    </table>
+
+    <h2>Color Scheme Verification</h2>
+    <ul>
+        <li><span style="background: #dbeafe; color: #1e40af; padding: 0.25rem 0.5rem;">Opener cells: BLUE background (#dbeafe)</span></li>
+        <li><span style="background: #d1fae5; color: #065f46; padding: 0.25rem 0.5rem;">Responder cells: GREEN background (#d1fae5)</span></li>
+        <li><span style="background: #ffffff; color: #1f2937; padding: 0.25rem 0.5rem; border: 1px solid #ccc;">Description cells: WHITE background</span></li>
+    </ul>
+
+    <h2>Expected Result</h2>
+    <p>This table demonstrates the EXACT multi-column auction structure needed from the PDF:</p>
+    <ul>
+        <li>Each level of the auction shifts the bid one column to the right</li>
+        <li>Blue background (#dbeafe) = Opener bid</li>
+        <li>Green background (#d1fae5) = Responder bid</li>
+        <li>White background = Description text</li>
+        <li>Proper borders around each cell</li>
+    </ul>
+</body>
+</html>

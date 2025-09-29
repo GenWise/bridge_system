@@ -1,0 +1,2390 @@
+{
+  "metadata": {
+    "title": "Uma + PS System",
+    "version": "1.0",
+    "lastUpdate": "Sep 2025",
+    "author": "Rajesh Panchanathan"
+  },
+  "sections": {
+    "1m-opening": {
+      "id": "1m-opening",
+      "title": "1♣ Opening: longer clubs or 44 in ♣ and ♦; denies 5M unless strong hands with 6+♣ and 5M",
+      "subtitle": "longer clubs or 44 in ♣ and ♦; denies 5M unless strong hands with 6+♣ and 5M",
+      "order": 1,
+      "content": {
+        "overview": "1 Club Opening: longer clubs or 44 in c and d; denies 5M unless strong hands with 6+c and 5M",
+        "sections": [
+          {
+            "title": "Non support showing responses",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1d",
+                "description": "Walsh; 5+, 7+d any/ 4+d, no 4M; OR 5d4M, 4-5/15+ or 6d4M, 4-8/15+; Opener Rebids",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Walsh", "type": "green", "target": "walsh"},
+                  {"text": "Opener Rebids", "type": "red", "target": "opener-rebids-1c1d"}
+                ]
+              },
+              {
+                "bid": "1c1M",
+                "description": "5+, 4+M, up the line; Opener rebids",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Opener rebids", "type": "red", "target": "opener-rebids-1c1M"}
+                ]
+              },
+              {
+                "bid": "1c2h",
+                "description": "Reverse Flannery: 5s4h/ 55/65, inv (Gd 8 – bad 11): (64 hands go via xyz); Opener Rebids",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Reverse Flannery", "type": "green", "target": "reverse-flannery"},
+                  {"text": "Opener Rebids", "type": "red", "target": "1c2h"}
+                ]
+              },
+              {
+                "bid": "1c2n",
+                "description": "10/11, no 4M generally denies 4d for 1d2n, nf; Opener Rebids",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Opener Rebids", "type": "red", "target": "1c2n"}
+                ]
+              },
+              {
+                "bid": "1c3n",
+                "description": "12-14, no 4M",
+                "cellType": "responder"
+              }
+            ]
+          },
+          {
+            "title": "Responses with support for m",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1n",
+                "description": "4+c, no 4 card M",
+                "cellType": "responder"
+              },
+              {
+                "bid": "1c2s",
+                "description": "5sp, 4+m, inv; Opener rebids on 1c2s",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Opener rebids on 1c2s", "type": "red", "target": "1c2s"}
+                ]
+              },
+              {
+                "bid": "1c2c",
+                "description": "Inverted minor: 10+, Opener rebids on 1c2c",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Opener rebids on 1c2c", "type": "red", "target": "1c2c"}
+                ]
+              },
+              {
+                "bid": "1c3c",
+                "description": "pre-empt/mixed no stiff",
+                "cellType": "responder"
+              },
+              {
+                "bid": "1c2d",
+                "description": "Mixed with stiff; Opener Rebids",
+                "cellType": "responder",
+                "links": [
+                  {"text": "Opener Rebids", "type": "red", "target": "1c2d"}
+                ]
+              },
+              {
+                "bid": "1c3d/1c3M",
+                "description": "Spl, 12-14 or 18+, denies 4OM",
+                "cellType": "responder"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "sequences": {
+    "opener-rebids-1c1d": {
+      "id": "opener-rebids-1c1d",
+      "title": "Opener rebids over 1♣1♦: Showing balanced hands, single suiter clubs, 2-suiter (♣ + another), or support for ♦",
+      "auction": ["1c", "1d"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "Rebids to show bal hands",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1d1n",
+                "description": "12-14; can have 4M if < 5c; rebids by responder on 1c1d1n",
+                "cellType": "opener",
+                "links": [
+                  {"text": "rebids by responder on 1c1d1n", "type": "blue", "target": "responder-rebids-1c1d1n"}
+                ]
+              },
+              {
+                "bid": "1c1d2n (non vul)",
+                "description": "18/19 bal responder rebids over 1c1d2n when non vul;",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids over 1c1d2n when non vul", "type": "blue", "target": "responder-rebids-1c1d2n-nv"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Rebids to show single suiter clubs",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1d2c",
+                "description": "4+c, 12-14; responder rebids on 1c1d2c",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids on 1c1d2c", "type": "blue", "target": "responder-rebids-1c1d2c"}
+                ]
+              },
+              {
+                "bid": "1c1d3c",
+                "description": "6+c, 15-17, nf",
+                "cellType": "opener"
+              },
+              {
+                "bid": "1c1d2n (vul)",
+                "description": "long c, 18+, no sing, gf; responder rebids 1c1d2n when vul",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids 1c1d2n when vul", "type": "blue", "target": "responder-rebids-1c1d2n-vul"}
+                ]
+              },
+              {
+                "bid": "1c1d2h (non vul)",
+                "description": "Artificial reverse: c+h/ long c; f1; responder rebids on 1c1d2h (non vul)",
+                "cellType": "opener",
+                "links": [
+                  {"text": "Artificial reverse", "type": "green", "target": "artificial-reverse"},
+                  {"text": "responder rebids on 1c1d2h (non vul)", "type": "blue", "target": "responder-rebids-1c1d2h-nv"}
+                ]
+              },
+              {
+                "bid": "1c1d3n",
+                "description": "Non vul: running c, 18-19, no sing; Vul: may be chancing (1c1d2n available)",
+                "cellType": "opener"
+              }
+            ]
+          },
+          {
+            "title": "Rebids to show 2 suiter: c + another",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1d1M",
+                "description": "12-17, 5+c, 4M; rebids by responder on 1c1d1M",
+                "cellType": "opener",
+                "links": [
+                  {"text": "rebids by responder on 1c1d1M", "type": "blue", "target": "responder-rebids-1c1d1M"}
+                ]
+              },
+              {
+                "bid": "1c1d2h (vul)",
+                "description": "Natural reverse: 5c,4h; 18+, gf (since jump shift) responder rebids on 1c1d2h (vul)",
+                "cellType": "opener",
+                "links": [
+                  {"text": "Natural reverse", "type": "green", "target": "natural-reverse"},
+                  {"text": "responder rebids on 1c1d2h (vul)", "type": "blue", "target": "responder-rebids-1c1d2h-vul"}
+                ]
+              },
+              {
+                "bid": "1c1d2s",
+                "description": "Natural reverse: 5c,4s 18+, gf (since jump shift) responder rebids on 1c1d2s",
+                "cellType": "opener",
+                "links": [
+                  {"text": "Natural reverse", "type": "green", "target": "natural-reverse"},
+                  {"text": "responder rebids on 1c1d2s", "type": "blue", "target": "responder-rebids-1c1d2s"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Rebids to show support for d",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1d2d",
+                "description": "4d, 4+c, 12-14",
+                "cellType": "opener"
+              },
+              {
+                "bid": "1c1d3d",
+                "description": "4d, 4+c, 15-17",
+                "cellType": "opener"
+              },
+              {
+                "bid": "1c1d3M",
+                "description": "Spl for d, 18+; denies 4OM",
+                "cellType": "opener"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "opener-rebids-1c1M": {
+      "id": "opener-rebids-1c1M",
+      "title": "Opener rebids over 1♣1M: Showing balanced/semi-balanced hands, single suiter clubs, 2-suiter (♣ + another), or support for M",
+      "auction": ["1c", "1M"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "Rebids to show bal/ semi-bal hands",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1M1n",
+                "description": "12-14; 1m1h1n denies 4 sp (may have 4s if 4333 hand); responder rebids on 1c1M1n",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids on 1c1M1n", "type": "blue", "target": "responder-rebids-1c1M1n"}
+                ]
+              },
+              {
+                "bid": "1c1M2n (non vul)",
+                "description": "18/19 bal responder rebids over 1c1M2n when non vul;",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids over 1c1M2n when non vul", "type": "blue", "target": "responder-rebids-1c1M2n-nv"}
+                ]
+              },
+              {
+                "bid": "1c1h1s",
+                "description": "12-17, 4+c, 4s; denies 4h; denies 3h with side sing rebids by responder on 1c1h1s",
+                "cellType": "opener",
+                "links": [
+                  {"text": "rebids by responder on 1c1h1s", "type": "blue", "target": "responder-rebids-1c1h1s"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Rebids to show single suiter clubs",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1M2c",
+                "description": "4+c, 12-14; responder rebids on 1c1M2c",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids on 1c1M2c", "type": "blue", "target": "responder-rebids-1c1M2c"}
+                ]
+              },
+              {
+                "bid": "1c1M3c",
+                "description": "6+c, 15-17, nf",
+                "cellType": "opener"
+              },
+              {
+                "bid": "1c1M2n (vul)",
+                "description": "long c, 18+, no sing, gf; responder rebids 1c1M2n when vul",
+                "cellType": "opener",
+                "links": [
+                  {"text": "responder rebids 1c1M2n when vul", "type": "blue", "target": "responder-rebids-1c1M2n-vul"}
+                ]
+              },
+              {
+                "bid": "1c1M2d (non vul)",
+                "description": "Artificial reverse: c+d/ long c; f1; responder rebids on 1c1M2d (non vul)",
+                "cellType": "opener",
+                "links": [
+                  {"text": "Artificial reverse", "type": "green", "target": "artificial-reverse"},
+                  {"text": "responder rebids on 1c1M2d (non vul)", "type": "blue", "target": "responder-rebids-1c1M2d-nv"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Rebids to show 2 suiter: c + another",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1h2s",
+                "description": "Natural reverse: 5c,4s; 18+, gf (since jump shift) responder rebids on 1c1h2s",
+                "cellType": "opener",
+                "links": [
+                  {"text": "Natural reverse", "type": "green", "target": "natural-reverse"},
+                  {"text": "responder rebids on 1c1h2s", "type": "blue", "target": "responder-rebids-1c1h2s"}
+                ]
+              },
+              {
+                "bid": "1c1s2h",
+                "description": "Natural reverse: 5c,4h 18+, responder rebids on 1c1s2h",
+                "cellType": "opener",
+                "links": [
+                  {"text": "Natural reverse", "type": "green", "target": "natural-reverse"},
+                  {"text": "responder rebids on 1c1s2h", "type": "blue", "target": "responder-rebids-1c1s2h"}
+                ]
+              }
+            ]
+          },
+          {
+            "title": "Rebids to show support for M",
+            "type": "table",
+            "data": [
+              {
+                "bid": "1c1M2M",
+                "description": "12-14; 4 card M/ 3 card M + sing; next step asks; 1c1h2h; 1c1s2s",
+                "cellType": "opener",
+                "links": [
+                  {"text": "1c1h2h", "type": "blue", "target": "responder-rebids-1c1h2h"},
+                  {"text": "1c1s2s", "type": "blue", "target": "responder-rebids-1c1s2s"}
+                ]
+              },
+              {
+                "bid": "1c1M3M",
+                "description": "1m1M3M: 4 card M, inv, nf; next step asks for sing",
+                "cellType": "opener"
+              },
+              {
+                "bid": "1c1M3d",
+                "description": "Power raise(vul): GF: 18-19, 5422/ super splinter; Power raise(NV): 1819. Bal/5422/super splinter; f to 3M",
+                "cellType": "opener",
+                "links": [
+                  {"text": "super splinter", "type": "green", "target": "super-splinter"}
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "1c2h": {
+      "id": "1c2h",
+      "title": "Opener rebids on 1♣2♥: Responses to Reverse Flannery (5♠4♥/55/65, invitational)",
+      "auction": ["1c", "2h"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "1c2h? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c2h?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2s", "type": "opener"},
+                    {"text": "To play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "opener"},
+                    {"text": "asking", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3m", "type": "responder"},
+                    {"text": "Support (5431 with 3 in p's m) good 8-10", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3om", "type": "responder"},
+                    {"text": "5422 or 5431 with 3om, need about 10", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3h", "type": "responder"},
+                    {"text": "55", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3s", "type": "responder"},
+                    {"text": "Good 5422, 11 hcp, values in short suits, 3n is doable", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "4m", "type": "responder"},
+                    {"text": "65 ( 4c = 6h5s; 4d = 6s5h)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3m", "type": "opener"},
+                    {"text": "nat nf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3om", "type": "opener"},
+                    {"text": "ftg gf 1 suiter in m", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "opener"},
+                    {"text": "Game try", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4m", "type": "opener"},
+                    {"text": "Slam try (c for h, d for s)", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "1c2n": {
+      "id": "1c2n",
+      "title": "Opener rebids on 1♣2NT: 10/11 HCP, no 4M generally denies 4♦ for 1♦2NT, non-forcing",
+      "auction": ["1c", "2n"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "1c2n? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c2n?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "3c", "type": "opener"},
+                    {"text": "signoff", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "opener"},
+                    {"text": "nat, reverse", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "opener"},
+                    {"text": "single suiter c, stiff M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4M", "type": "opener"},
+                    {"text": "6c + 5M", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "1c2s": {
+      "id": "1c2s",
+      "title": "Opener rebids on 1♣2♠: 5♠, 4+m, invitational response",
+      "auction": ["1c", "2s"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "1c2s? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c2s?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2n", "type": "opener"},
+                    {"text": "asking", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3m", "type": "responder"},
+                    {"text": "54 min", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3om", "type": "responder"},
+                    {"text": "55 min", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3h", "type": "responder"},
+                    {"text": "54 max", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3s", "type": "responder"},
+                    {"text": "55 max", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3m", "type": "opener"},
+                    {"text": "nat nf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3om", "type": "opener"},
+                    {"text": "xx AQx qjxx KQxx; ftg gf 1 suiter in m, sets m", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3h", "type": "opener"},
+                    {"text": "Sets s", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "opener"},
+                    {"text": "Game try", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "1c2c": {
+      "id": "1c2c",
+      "title": "Opener rebids on 1♣2♣: Inverted minor, 10+ HCP response",
+      "auction": ["1c", "2c"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "1c2c? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c2c?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2x", "type": "opener"},
+                    {"text": "Nat, promises 4+m; over this responder's 3m = nf; rest (inc 2n) = gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "opener"},
+                    {"text": "Ftg; now opener's frag over this = 15-17", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3y (y>m)", "type": "opener"},
+                    {"text": "stiff, 15-17", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3x if x = M", "type": "opener"},
+                    {"text": "15+, 4M and 5+m", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3m", "type": "opener"},
+                    {"text": "Min, nf", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "1c2d": {
+      "id": "1c2d",
+      "title": "Opener rebids on 1♣2♦: Mixed with singleton response",
+      "auction": ["1c", "2d"],
+      "player": "opener",
+      "content": {
+        "sections": [
+          {
+            "title": "1c2d? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c2d?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2h", "type": "opener"},
+                    {"text": "Asks for stiff", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2s", "type": "responder"},
+                    {"text": "S sing", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "responder"},
+                    {"text": "D sing (shows 6+ clubs, since 4M is denied)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "responder"},
+                    {"text": "H sing", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d1n": {
+      "id": "responder-rebids-1c1d1n",
+      "title": "Responder rebids on 1♣1♦1NT: 12-14 balanced, can have 4M if < 5♣",
+      "auction": ["1c", "1d", "1n"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1d1n? (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d1n?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "Pass", "type": "responder"},
+                    {"text": "to play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2c", "type": "responder"},
+                    {"text": "Puppet to 2d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2d", "type": "opener"},
+                    {"text": "Puppetted bid", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "pass", "type": "responder"},
+                    {"text": "To play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2M", "type": "responder"},
+                    {"text": "Short M, 6+d, 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "responder"},
+                    {"text": "Bal inv; no suit fit possible", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "responder"},
+                    {"text": "4c, 6+d, inv", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "6+d, COG", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2d", "type": "responder"},
+                    {"text": "Gf; subsequent bid showing 4M is 15+ with 5d, 4M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2M", "type": "opener"},
+                    {"text": "4 card M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "opener"},
+                    {"text": "No 4 card M, no 5c/4d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "5 card c, no 4M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3d", "type": "opener"},
+                    {"text": "4 card d, no 4M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2M", "type": "responder"},
+                    {"text": "6d, 4M, <8, shape invite", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "puppet to 3c for signoff or 64 hands (mild slam try)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "Forced", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "Pass", "type": "responder"},
+                    {"text": "to play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3d/3M", "type": "responder"},
+                    {"text": "6d + 4 clubs/M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "5c5d, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "single suit d, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "responder"},
+                    {"text": "6d,5M gf+", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4c", "type": "responder"},
+                    {"text": "Self spl in d", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d2n-nv": {
+      "id": "responder-rebids-1c1d2n-nv",
+      "title": "Responder rebids on 1♣1♦2NT when non vulnerable: 18/19 balanced",
+      "auction": ["1c", "1d", "2n (non vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1d2n when non vul? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d2n when non vul?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "xfer to d, nf; over which", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3d", "type": "opener"},
+                    {"text": "Forced", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3M", "type": "responder"},
+                    {"text": "4M + 6d, 15+", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "6+d, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3(M-1)", "type": "responder"},
+                    {"text": "xfer to M: 5d, 4M, 15+", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "responder"},
+                    {"text": "5+d, 4c, st/ doubt about nt", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3n", "type": "responder"},
+                    {"text": "To play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4x", "type": "responder"},
+                    {"text": "Self splinter, ♦ suit set ( ok to splinter in ♣ also)", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d2c": {
+      "id": "responder-rebids-1c1d2c",
+      "title": "Responder rebids on 1♣1♦2♣: 4+♣, 12-14 HCP rebid by opener",
+      "auction": ["1c", "1d", "2c"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "Responder rebids on 1c1d2c? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d2c?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2h/2n", "type": "responder"},
+                    {"text": "Unbal/ bal invite", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2s", "type": "responder"},
+                    {"text": "gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "8/9", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "0/1 loser suit, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "responder"},
+                    {"text": "spl for clubs", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d2n-vul": {
+      "id": "responder-rebids-1c1d2n-vul",
+      "title": "Responder rebids on 1♣1♦2NT when vulnerable: long ♣, 18+ HCP, no singleton, game forcing",
+      "auction": ["1c", "1d", "2n (vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "Responder rebids on 1c1d2n when vul? (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d2n when vul?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "3m", "type": "responder"},
+                    {"text": "default bid", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3OM", "type": "responder"},
+                    {"text": "slam interest in m", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "6+ d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3n", "type": "responder"},
+                    {"text": "no fit", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d2h-nv": {
+      "id": "responder-rebids-1c1d2h-nv",
+      "title": "Responder rebids on 1♣1♦2♥ when non vulnerable: Artificial reverse (♣+♥/long ♣), forcing 1 round",
+      "auction": ["1c", "1d", "2h (non vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1d2h when non vul (artificial reverse)? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d2h when non vul?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2s", "type": "responder"},
+                    {"text": "Asking bid (non signoff hands)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "opener"},
+                    {"text": "45, min", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "single suit c, min, nf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3d", "type": "opener"},
+                    {"text": "3 card d, 4h, 5c", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3h", "type": "opener"},
+                    {"text": "45, max, gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3s", "type": "opener"},
+                    {"text": "single suit c, gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "opener"},
+                    {"text": "single suit c, min, good suit, COG", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "Nat, nf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "min, nf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "long d, nf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3h", "type": "responder"},
+                    {"text": "4 card h, 5/6 d, 15+", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d2h-vul": {
+      "id": "responder-rebids-1c1d2h-vul",
+      "title": "Responder rebids on 1♣1♦2♥ when vulnerable: Natural reverse (5♣,4♥), 18+ HCP, game forcing",
+      "auction": ["1c", "1d", "2h (vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1d2h when vul (natural reverse) GF? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d2h when vul GF?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2s", "type": "responder"},
+                    {"text": "start of a possible weak sequence", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "opener"},
+                    {"text": "relayed bid, min; over this responder's 3c/3d = weak rest max reverse", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3c/3d", "type": "responder"},
+                    {"text": "weak", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "rest", "type": "responder"},
+                    {"text": "max reverse", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "Gf; support in c", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "Long d, gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3h", "type": "responder"},
+                    {"text": "4 card h; 5+d; 15+", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "responder"},
+                    {"text": "Can't raise p's suits, but good hand, slammish ( can have 5+d, 4s, 15+)", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d2s": {
+      "id": "responder-rebids-1c1d2s",
+      "title": "Responder rebids on 1♣1♦2♠: Natural reverse (5♣,4♠), 18+ HCP, game forcing",
+      "auction": ["1c", "1d", "2s"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1d2s (natural reverse) GF? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d2s GF?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "start of a possible weak sequence", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "relayed bid, min; over this responder's 3d = weak rest max reverse", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3d", "type": "responder"},
+                    {"text": "weak", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "rest", "type": "responder"},
+                    {"text": "max reverse", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "Gf; support in c", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "Long d, gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3h", "type": "responder"},
+                    {"text": "Can't raise p's suits, but good hand, slammish ( can have 5+d, 4s, 15+)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "responder"},
+                    {"text": "4 card s; 5+d; 15+", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1d1M": {
+      "id": "responder-rebids-1c1d1M",
+      "title": "Responder rebids on 1♣1♦1M: 12-17 HCP, 5+♣, 4M rebid by opener",
+      "auction": ["1c", "1d", "1M"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1d1h? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d1h?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "1s", "type": "responder"},
+                    {"text": "Puppet to 1n, denies 4s", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "1n", "type": "opener"},
+                    {"text": "Forced", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "P/ 2c", "type": "responder"},
+                    {"text": "to play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2d", "type": "responder"},
+                    {"text": "opener to pass/ bid 2h ( has 3h)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "1n", "type": "responder"},
+                    {"text": "4s, 5+d, wk hand (opener can choose between 1n and 2d)", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          },
+          {
+            "title": "1c1d1M? (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1d1M?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "Pass", "type": "responder"},
+                    {"text": "Wk hand (4-6) with 3M ( can be 4 if 5d also)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "1c1d1s1n", "type": "responder"},
+                    {"text": "<10, can have 5d, 4h 4-6", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2c", "type": "responder"},
+                    {"text": "Puppet to 2d to play or invite with 10-11 hcp", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2d", "type": "opener"},
+                    {"text": "Puppetted bid", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "Pass", "type": "responder"},
+                    {"text": "To play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2M", "type": "responder"},
+                    {"text": "6d, 4M, 6-7", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2OM", "type": "responder"},
+                    {"text": "Short OM, 6+d, 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "responder"},
+                    {"text": "Bal inv; no suit fit possible", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3d", "type": "responder"},
+                    {"text": "6+d, 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "responder"},
+                    {"text": "4 clubs, 5+d, 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2d", "type": "responder"},
+                    {"text": "GF without 4M; subsequent bid showing 4OM is 15+ with 5d, 4OM", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2M", "type": "responder"},
+                    {"text": "3 card M, 5+d, 8-9", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "puppet to 3c for signoff or 64 hands (mild slam try)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "Forced", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3d/3M", "type": "responder"},
+                    {"text": "6d + 4 clubs/M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "6d 6331/6332 hands", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "55, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "single suit d, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "responder"},
+                    {"text": "GF with 4M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3OM", "type": "responder"},
+                    {"text": "6,5 gf+", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4x", "type": "responder"},
+                    {"text": "1m1y1M4x = spl in M", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1M1n": {
+      "id": "responder-rebids-1c1M1n",
+      "title": "Responder rebids on 1♣1M1NT: 12-14 balanced, may deny 4♠ if 1♣1♥1NT",
+      "auction": ["1c", "1M", "1n"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1M1n? (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1M1n?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2c", "type": "responder"},
+                    {"text": "Hcp based invite (10-11) or wk hand to play in d. Puppets to 2d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2d", "type": "opener"},
+                    {"text": "Forced", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "pass", "type": "responder"},
+                    {"text": "to play in d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2M/2n", "type": "responder"},
+                    {"text": "Invite with/without 5 card M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3M", "type": "responder"},
+                    {"text": "unbal inv; 6+M", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "1m1s1n2c2d2h", "type": "responder"},
+                    {"text": "5s, 4h; 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "1m1h1n2c2d2s", "type": "responder"},
+                    {"text": "6h, 4s, 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3om", "type": "responder"},
+                    {"text": "4M, 6+om, inv", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "5M, COG", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2d", "type": "responder"},
+                    {"text": "art, ftg; subsequent bid of 3n by resp = mild slam try", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2M", "type": "responder"},
+                    {"text": "6+M, unbal, wk;", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2OM", "type": "responder"},
+                    {"text": "1m1h1n2s = 6h, 4s invite; 1m1s1n2h = 5s, 4h; wk", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "puppet to 3c for signoff or 64 hands (mild slam try)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "Forced", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "1m1h1n2n3c3s", "type": "responder"},
+                    {"text": "1633", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "1m1h1n2n3c3n", "type": "responder"},
+                    {"text": "26 and 32 in m", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3m/ns (ns<M)", "type": "responder"},
+                    {"text": "55, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "responder"},
+                    {"text": "single suit M, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "1m1h1n3s", "type": "responder"},
+                    {"text": "6,5 gf+", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4x", "type": "responder"},
+                    {"text": "Self spl in M", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1M2n-nv": {
+      "id": "responder-rebids-1c1M2n-nv",
+      "title": "Responder rebids on 1♣1M2NT when non vulnerable: 18/19 balanced",
+      "auction": ["1c", "1M", "2n (non vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1M2n when non vul (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1M2n when non vul",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "xfer to d; xfer followed by 3M = 5M, 4+d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3d", "type": "responder"},
+                    {"text": "M = h: 5 h; over 3h, 3s = 5h4s, 4c = nat; 4d/4M = st with/without d cue M = s: 5s4h, opener bids 3h/3s only with fit", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3h", "type": "responder"},
+                    {"text": "M = h: 4h4s; 3s bid only with fit; M = s: 5 s, over 3s, 4c = nat; rest cue", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "responder"},
+                    {"text": "clubs", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1M2c": {
+      "id": "responder-rebids-1c1M2c",
+      "title": "Responder rebids on 1♣1M2♣: 4+♣, 12-14 HCP rebid by opener",
+      "auction": ["1c", "1M", "2c"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1M2c? (opener #d1fae5, responder #dbeafe)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1M2c?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2d", "type": "responder"},
+                    {"text": "art, inv; 2M/2OM= min with/out 3M; 3M/2n = gf with/without 3M; 3c = gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2OM", "type": "responder"},
+                    {"text": "art, gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2M", "type": "responder"},
+                    {"text": "5M, unbal (playing strength bid, 55 etc. need controls from op) or weak 6", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "Puppet to 3c, over which 3x = 64; 3M = 6M+4c; 3n = 15-17 bal", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "Puppetted bid", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3x", "type": "responder"},
+                    {"text": "64", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3M", "type": "responder"},
+                    {"text": "6M+4c", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "15-17 bal", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c", "type": "responder"},
+                    {"text": "nat, gf", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3M", "type": "responder"},
+                    {"text": "6+ inv, not interested in 3n (with 6M, inv, and 3n possible, go via 2d)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3x", "type": "responder"},
+                    {"text": "55, if x < M; rest = spl for m, slammish", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1M2n-vul": {
+      "id": "responder-rebids-1c1M2n-vul",
+      "title": "Responder rebids on 1♣1M2NT when vulnerable: long ♣, 18+ HCP, no singleton, game forcing",
+      "auction": ["1c", "1M", "2n (vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1M2n when vul",
+            "type": "table",
+            "data": [
+              {
+                "bid": "3m",
+                "description": "default bid",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3OM",
+                "description": "slam interest in m",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3M",
+                "description": "5+",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3n",
+                "description": "no fit",
+                "cellType": "responder"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1M2d-nv": {
+      "id": "responder-rebids-1c1M2d-nv",
+      "title": "Responder rebids on 1♣1M2♦ when non vulnerable: Artificial reverse (♣+♦/long ♣), forcing 1 round",
+      "auction": ["1c", "1M", "2d (non vul)"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "Responder rebids on 1c1M2d when non vul (artificial reverse)",
+            "type": "table",
+            "data": [
+              {
+                "bid": "2M",
+                "description": "5+M, signoff",
+                "cellType": "responder"
+              },
+              {
+                "bid": "2OM",
+                "description": "Asking bid (non signoff hands)",
+                "cellType": "responder"
+              },
+              {
+                "bid": "2n",
+                "description": "45, min",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "single suit c, min, nf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3d",
+                "description": "45, max, gf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3M",
+                "description": "3 card d, 4h, 5c",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3OM",
+                "description": "single suit c, gf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3n",
+                "description": "single suit c, min, good suit, COG",
+                "cellType": "responder"
+              },
+              {
+                "bid": "2n",
+                "description": "Nat, nf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "min, nf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3d",
+                "description": "nsb",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3M",
+                "description": "5+M, good suit, gf",
+                "cellType": "responder"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1h2s": {
+      "id": "responder-rebids-1c1h2s",
+      "title": "Responder rebids on 1♣1♥2♠: Natural reverse (5♣,4♠), 18+ HCP, game forcing",
+      "auction": ["1c", "1h", "2s"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "Responder rebids on 1c1h2s (natural reverse) GF",
+            "type": "table",
+            "data": [
+              {
+                "bid": "2n",
+                "description": "start of a possible weak sequence",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "relayed bid, min; over this responder's 3h/3s = weak rest max reverse",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "Gf; support in c",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3d",
+                "description": "Can't raise p's suits, but good hand, slammish",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3h",
+                "description": "Long h, gf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3s",
+                "description": "4 card s",
+                "cellType": "responder"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1s2h": {
+      "id": "responder-rebids-1c1s2h",
+      "title": "Responder rebids on 1♣1♠2♥: Natural reverse (5♣,4♥), 18+ HCP, forcing 1 round",
+      "auction": ["1c", "1s", "2h"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "Responder rebids on 1c1s2h (natural reverse) f1",
+            "type": "table",
+            "data": [
+              {
+                "bid": "2s",
+                "description": "5+M, f1",
+                "cellType": "responder"
+              },
+              {
+                "bid": "2n",
+                "description": "Asking bid (non signoff hands)",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "relayed bid, min; over this responder's 3h/3s = weak rest max reverse",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "Gf; support in c",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3d",
+                "description": "Can't raise p's suits, but good hand, slammish",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3h",
+                "description": "4 card h, 5 sp, gf",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3s",
+                "description": "Long s, gf",
+                "cellType": "responder"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1h1s": {
+      "id": "responder-rebids-1c1h1s",
+      "title": "Responder rebids on 1♣1♥1♠: 12-17 HCP, 4+♣, 4♠; denies 4♥; denies 3♥ with side singleton",
+      "auction": ["1c", "1h", "1s"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "Responder rebids on 1m1h1s? (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1h1s?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "P", "type": "responder"},
+                    {"text": "to play", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "1n", "type": "responder"},
+                    {"text": "Nf; over this opener's bids show unbalanced extras", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2h", "type": "opener"},
+                    {"text": "4s, 3h, 5m, 1 om; 15-17", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3h", "type": "opener"},
+                    {"text": "4s, 3h, 6m, void in om; 15-17", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2c", "type": "responder"},
+                    {"text": "Hcp based invite (10-11) or wk hand to play in d. Puppets to 2d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "2d", "type": "opener"},
+                    {"text": "Puppetted bid", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "pass", "type": "responder"},
+                    {"text": "to play in d", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2h/2s/3c", "type": "responder"},
+                    {"text": "invite with 5 card h/4s/4c", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "2n", "type": "responder"},
+                    {"text": "Bal inv; no suit fit possible", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3h", "type": "responder"},
+                    {"text": "unbal inv; 6+h", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3s", "type": "responder"},
+                    {"text": "Unbal invite with 4s", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3om", "type": "responder"},
+                    {"text": "6M and 4om, 10-11", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "5h, COG", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2d", "type": "responder"},
+                    {"text": "art, ftg; subsequent bid of 3n by resp = mild slam try", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2h", "type": "responder"},
+                    {"text": "6+h, unbal, wk;", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2s", "type": "responder"},
+                    {"text": "6-9, 4 card sp", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "puppet to 3c for signoff or 64 hands (mild slam try)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "Puppetted bid", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3h/3d/3s", "type": "responder"},
+                    {"text": "6h + 4 clubs/d/s", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3n", "type": "responder"},
+                    {"text": "6h 6331/6332 hands ( short in p's m)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3c/d", "type": "responder"},
+                    {"text": "5h5c/d, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3h", "type": "responder"},
+                    {"text": "single suit h, slammish", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "responder"},
+                    {"text": "gf with 4M ( not via 2d)", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4m", "type": "responder"},
+                    {"text": "Spl in sp", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1h2h": {
+      "id": "responder-rebids-1c1h2h",
+      "title": "Responder rebids on 1♣1♥2♥: 12-14 HCP; 4 card ♥/3 card ♥ + singleton; next step asks",
+      "auction": ["1c", "1h", "2h"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1h2h?",
+            "type": "table",
+            "data": [
+              {
+                "bid": "2s",
+                "description": "asking",
+                "cellType": "responder"
+              },
+              {
+                "bid": "2n",
+                "description": "4301",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3c",
+                "description": "5c, 4d, 3h, sing s; min",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3d",
+                "description": "5c, 5d, 3h, sing s; max",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3h/3n/4h",
+                "description": "4 card h, min/bal max with slam int/max without slam int",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3s/4d",
+                "description": "4 card h, max with good slam attitude, stiff s/d",
+                "cellType": "responder"
+              },
+              {
+                "bid": "2n/3m",
+                "description": "Help ask in s/c",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3h",
+                "description": "All round help ask",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3n",
+                "description": "good h; bal st",
+                "cellType": "responder"
+              },
+              {
+                "bid": "3s/4d",
+                "description": "Spl; h suit set",
+                "cellType": "responder"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "responder-rebids-1c1s2s": {
+      "id": "responder-rebids-1c1s2s",
+      "title": "Responder rebids on 1♣1♠2♠: 12-14 HCP; 4 card ♠/3 card ♠ + singleton; next step asks",
+      "auction": ["1c", "1s", "2s"],
+      "player": "responder",
+      "content": {
+        "sections": [
+          {
+            "title": "1c1s2s? (opener #dbeafe, responder #d1fae5)",
+            "type": "auction_table",
+            "data": {
+              "header": "1c1s2s?",
+              "rows": [
+                {
+                  "bids": [
+                    {"text": "2n", "type": "responder"},
+                    {"text": "asking", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3c", "type": "opener"},
+                    {"text": "3145/3415 min; 3d asks for 4 card suit", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "", "type": "empty"},
+                    {"text": "3d", "type": "responder"},
+                    {"text": "asks for 4 card suit", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3d/h", "type": "opener"},
+                    {"text": "4 cards in d/h; 3 sp; 5c, max", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "3s/3n/4s", "type": "opener"},
+                    {"text": "4 card s, min/bal max with slam int/max without slam int", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "", "type": "empty"},
+                    {"text": "4d/h", "type": "opener"},
+                    {"text": "4 card s, max with good slam attitude, stiff d/h", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3m/h", "type": "responder"},
+                    {"text": "Help ask", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3s", "type": "responder"},
+                    {"text": "All round help ask", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "3n", "type": "responder"},
+                    {"text": "good s; bal st", "type": "description"}
+                  ]
+                },
+                {
+                  "bids": [
+                    {"text": "4d/h", "type": "responder"},
+                    {"text": "Spl; s suit set", "type": "description"}
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "walsh": {
+      "id": "walsh",
+      "title": "Walsh",
+      "category": "bidding-convention",
+      "definition": "Holding 5+d and 4M; bid 1d ( instead of 1M) when",
+      "details": [
+        "Weak hands (5-7) with 5/6 d and 4M; don't see game opp 18/19; so looking at signoff in d",
+        "Strong hands, 15+ hcp; On such hands, subsequently 2d gf shows 45 and 2n st shows 46",
+        "7+ d, any strength"
+      ]
+    },
+    "artificial-reverse": {
+      "id": "artificial-reverse",
+      "title": "Artificial reverse",
+      "category": "bidding-convention",
+      "definition": "(applicable only when non vul) 1x1y2z (y ≠nt; z = cheapest 2 bid) = single suit x/ 45; f1; over this, general algorithm is as below",
+      "algorithm": {
+        "2y_if_available": "nf",
+        "ask_bid": "2fs or 2n whichever is cheaper; (non sign off hands)",
+        "responses_to_asking": [
+          "2y if available = 3 card y, 45 in y and x",
+          "2n If available = 45, min",
+          "3fs = single suit x, gf",
+          "3y 3 card y, 45 in y and x ( if 2y is available then 3y = 6331)",
+          "3x single suit x, min, nf ( if 2n is asking 3x = single x min or 45min)",
+          "3z 45, max, gf",
+          "3n single suit x, min, good suit, COG"
+        ],
+        "other_responses": [
+          "2n if not asking bid = nat, nf",
+          "3x min, nf",
+          "3y long y, nf if 2y not available, if 2y available then 3y = 0/1 loser suit",
+          "3z 4 card z, gf"
+        ]
+      }
+    },
+    "natural-reverse": {
+      "id": "natural-reverse",
+      "title": "Natural reverse",
+      "category": "bidding-convention",
+      "definition": "1x1y2z: z is not the cheapest 2 bid, (not art reverse); f1, gf if jump shift",
+      "algorithm": {
+        "general_responses": [
+          "2y if available = 5+y, mostly gf",
+          "2n or 2fs start of a possible weak sequence",
+          "2n/3x relayed bid, min reverse",
+          "rest max reverse",
+          "3x gf",
+          "3fs Can't raise p's suits, but good hand, slammish"
+        ]
+      }
+    },
+    "reverse-flannery": {
+      "id": "reverse-flannery",
+      "title": "Reverse Flannery",
+      "category": "bidding-convention",
+      "definition": "Something"
+    },
+    "super-splinter": {
+      "id": "super-splinter",
+      "title": "Super splinter",
+      "category": "bidding-convention",
+      "definition": "something"
+    }
+  },
+  "cross_references": {
+    "1c-opening": ["walsh", "reverse-flannery", "artificial-reverse", "natural-reverse"],
+    "opener-rebids": ["artificial-reverse", "natural-reverse", "super-splinter"],
+    "walsh": ["1c-1d-response"],
+    "artificial-reverse": ["opener-rebids-1c1d", "opener-rebids-1cM"],
+    "natural-reverse": ["opener-rebids-1c1d", "opener-rebids-1cM"]
+  },
+  "bid_colors": {
+    "opener": {
+      "background": "#d1fae5",
+      "color": "#065f46",
+      "border": "#a7f3d0"
+    },
+    "responder": {
+      "background": "#dbeafe",
+      "color": "#1e40af",
+      "border": "#93c5fd"
+    }
+  },
+  "link_types": {
+    "red-text": {
+      "color": "#dc2626",
+      "target": "level2-content",
+      "description": "Links to detailed sequences and rebids"
+    },
+    "green-text": {
+      "color": "#059669",
+      "target": "definitions-panel",
+      "description": "Links to definitions and concepts"
+    },
+    "blue-text": {
+      "color": "#2563eb",
+      "target": "level2-content",
+      "description": "Links to specific bid sequences"
+    }
+  }
+}

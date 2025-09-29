@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uma + PS Bridge System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <h1>Uma + PS System</h1>
+            <div class="header-controls">
+                <div class="search-container">
+                    <input type="text" id="search-input" placeholder="Search bids, sequences..." />
+                    <button id="search-btn">🔍</button>
+                </div>
+                <button id="edit-toggle" class="edit-btn">Edit Mode</button>
+                <span class="update-date">Last update: Sep 2025</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- TOC: Thin left column (200px) -->
+        <div class="panel toc-panel" id="toc-panel">
+            <div class="panel-header">
+                <h3>This is sort of TOC</h3>
+            </div>
+            <div class="panel-content" id="toc-content">
+                <div class="toc-item active" data-section="1m-opening" title="1♣ Opening: longer clubs or 44 in ♣ and ♦; denies 5M unless strong hands with 6+♣ and 5M">1♣ Opening</div>
+                <div class="toc-item" data-section="1m-intervention" title="1m intervention">1♣ Intervention</div>
+                <div class="toc-item" data-section="1M-op" title="1M op">1M Opening</div>
+            </div>
+        </div>
+
+        <!-- Level A: Main content area -->
+        <div class="panel content-panel level-a-panel" id="level-a-panel">
+            <div class="panel-header">
+                <div class="panel-nav">
+                    <div class="breadcrumb" id="level-a-breadcrumb">
+                        <span class="breadcrumb-item current" id="level-a-breadcrumb-current">Select from contents</span>
+                    </div>
+                    <button class="back-btn" id="level-a-back" style="display: none;" title="Go back to TOC">← Back</button>
+                </div>
+                <div>
+                    <h3 id="level-a-title">First level (page) of 1m opening</h3>
+                    <button class="collapse-btn" title="Toggle panel">−</button>
+                </div>
+            </div>
+            <div class="panel-content" id="level-a-content">
+                <div class="loading-message">Loading content...</div>
+            </div>
+            <button class="close-overlay" id="level-a-close" style="display: none;">×</button>
+        </div>
+
+        <!-- Level B: Secondary content area (hidden by default) -->
+        <div class="panel content-panel level-b-panel" id="level-b-panel" style="display: none;">
+            <div class="panel-header">
+                <div class="panel-nav">
+                    <div class="breadcrumb" id="level-b-breadcrumb">
+                        <span class="breadcrumb-item" id="level-b-breadcrumb-a">Part 1</span>
+                        <span class="breadcrumb-separator">›</span>
+                        <span class="breadcrumb-item current" id="level-b-breadcrumb-current">Part 2</span>
+                    </div>
+                    <button class="back-btn" id="level-b-back" style="display: block;" title="Go back to Level A">← Back</button>
+                </div>
+                <div>
+                    <h3 id="level-b-title">Level B Content</h3>
+                    <button class="collapse-btn" title="Toggle panel">−</button>
+                </div>
+            </div>
+            <div class="panel-content" id="level-b-content">
+                <div class="placeholder-text">Level B content will appear here</div>
+            </div>
+            <button class="close-overlay" id="level-b-close" style="display: none;">×</button>
+        </div>
+
+        <!-- Definitions panel (floating overlay when active) -->
+        <div class="panel definitions-panel floating-panel" id="definitions-panel" style="display: none;">
+            <div class="panel-header">
+                <h3>Definitions</h3>
+                <button class="collapse-btn" title="Toggle panel">−</button>
+            </div>
+            <div class="panel-content" id="definitions-content">
+                <div class="placeholder-text">Definition content will appear here</div>
+            </div>
+            <button class="close-overlay" id="definitions-close" style="display: none;">×</button>
+        </div>
+    </div>
+
+    <!-- Floating overlay background -->
+    <div class="floating-overlay" id="floating-overlay"></div>
+
+    <!-- Notification Container -->
+    <div class="notification-container" id="notification-container"></div>
+
+    <!-- Edit Mode Overlay -->
+    <div class="edit-overlay" id="edit-overlay" style="display: none;">
+        <div class="edit-toolbar">
+            <button id="add-section">+ Add Section</button>
+            <button id="add-definition">+ Add Definition</button>
+            <button id="import-data">Import</button>
+            <button id="export-data">Export</button>
+            <button id="save-changes">Save Changes</button>
+        </div>
+    </div>
+
+    <!-- Modal for editing -->
+    <div class="modal" id="edit-modal" style="display: none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">Edit Content</h3>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label for="content-title">Title:</label>
+                    <input type="text" id="content-title" />
+                </div>
+                <div class="form-group">
+                    <label for="content-body">Content:</label>
+                    <div id="content-editor" class="rich-editor"></div>
+                </div>
+                <div class="form-group">
+                    <label>Bridge Notation:</label>
+                    <div class="notation-toolbar">
+                        <button class="notation-btn" data-suit="♠">♠</button>
+                        <button class="notation-btn" data-suit="♥">♥</button>
+                        <button class="notation-btn" data-suit="♦">♦</button>
+                        <button class="notation-btn" data-suit="♣">♣</button>
+                        <button class="notation-btn" data-notation="NT">NT</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button id="save-content">Save</button>
+                <button id="cancel-edit">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
