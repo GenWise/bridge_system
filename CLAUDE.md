@@ -74,3 +74,29 @@ bridge_system/
 - Functional interactive links with correct colors
 - No unnecessary additions or elaborations
 - Direct action over asking permission
+- **First Time Right (FTR) mindset**: Thorough analysis before implementation
+- **Verification before claiming completion**: Use subagents to validate changes
+- **No assumptions about content**: Always check PDF for exact text
+
+### Session Learnings (Sep 30, 2025)
+
+#### Header Consolidation Implementation
+- **Requirement**: Split titles at colon (":"), show first part as breadcrumb, second part as subtitle in header tile
+- **Implementation**: `app.js:239-268` (displaySection), `app.js:702-748` (showLevelB)
+- **Key fix**: Remove duplicate subtitle/overview from content body (`app.js:333-337`, `app.js:804-805`)
+- **CSS**: `.title-main` and `.title-subtitle` classes at `styles.css:163-174`
+
+#### Bid Color Corrections
+- **Issue**: Conflicting CSS rules at lines 723-755 vs 874-889
+- **Resolution**: Earlier rules must match correct colors (Opener=GREEN #d1fae5, Responder=BLUE #dbeafe)
+- **Lesson**: Check all instances of color definitions, not just first occurrence
+
+#### Content Accuracy Enforcement
+- **"Forced" → "Puppetted bid"**: 6 instances corrected in data.json via Edit replace_all
+- **Color annotations removed**: 19 instances via sed command
+- **Validation**: Subagent verification confirmed all changes before claiming completion
+
+#### Development Workflow Clarifications
+- **No hot-reload**: Server requires restart (kill + python3 server.py) for changes to load
+- **Browser cache**: Hard refresh (Cmd+Shift+R) required after server restart
+- **Default port**: 9999 (changed from 8000 in server.py)
