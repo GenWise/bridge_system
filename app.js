@@ -242,8 +242,29 @@ class BridgeSystem {
 
         // Set title with smart truncation for better readability
         const fullTitle = sectionData.title || 'Bridge System Content';
-        const smartTitle = this.getSmartTitle(fullTitle);
-        title.textContent = smartTitle;
+
+        // Split title at colon to extract subtitle
+        let mainTitle = fullTitle;
+        let subtitleText = null;
+
+        if (fullTitle.includes(': ')) {
+            const parts = fullTitle.split(': ');
+            mainTitle = parts[0];
+            subtitleText = parts.slice(1).join(': ');
+        }
+
+        const smartTitle = this.getSmartTitle(mainTitle);
+        const displaySubtitle = subtitleText || sectionData.subtitle;
+
+        // Create consolidated header with subtitle in green tile
+        if (displaySubtitle) {
+            title.innerHTML = `
+                <div class="title-main">${this.convertBridgeNotation(smartTitle)}</div>
+                <div class="title-subtitle">${this.convertBridgeNotation(displaySubtitle)}</div>
+            `;
+        } else {
+            title.textContent = smartTitle;
+        }
         title.title = fullTitle; // Tooltip shows full title on hover
 
         // Generate HTML from structured data
@@ -314,16 +335,6 @@ class BridgeSystem {
         if (!content) return '<div class="loading-message">No content available</div>';
 
         let html = [];
-
-        // Add subtitle if available
-        if (sectionData.subtitle) {
-            html.push(`<div class="section-subtitle">${sectionData.subtitle}</div>`);
-        }
-
-        // Add overview
-        if (content.overview) {
-            html.push(`<div class="overview">${this.convertBridgeNotation(content.overview)}</div>`);
-        }
 
         // Process sections (new structure)
         if (content.sections) {
@@ -456,7 +467,7 @@ class BridgeSystem {
     }
 
     generateAuctionTable(auctionData) {
-        // Multi-column auction table rendering - Opener cells BLUE (#dbeafe), Responder cells GREEN (#d1fae5)
+        // Multi-column auction table rendering - Opener cells GREEN (#d1fae5), Responder cells BLUE (#dbeafe)
         let html = ['<table class="auction-table">'];
 
         // Add colgroup to define column widths - flexible for varying column counts
@@ -468,10 +479,12 @@ class BridgeSystem {
         html.push('<col>'); // Description column - takes remaining space
         html.push('</colgroup>');
 
-        // Add header row if present
+        // Add header row if present (remove color codes from display)
         if (auctionData.header) {
             html.push('<tr class="auction-header">');
-            html.push(`<td colspan="10" class="auction-title">${this.convertBridgeNotation(auctionData.header)}</td>`);
+            // Remove color code annotations like "(opener #d1fae5, responder #dbeafe)"
+            const cleanHeader = this.convertBridgeNotation(auctionData.header).replace(/\s*\(opener\s*#[a-f0-9]+,\s*responder\s*#[a-f0-9]+\)/gi, '');
+            html.push(`<td colspan="${maxCols}" class="auction-title">${cleanHeader}</td>`);
             html.push('</tr>');
         }
 
@@ -479,20 +492,37 @@ class BridgeSystem {
         for (const row of auctionData.rows) {
             html.push('<tr class="auction-row">');
 
-            for (const bid of row.bids) {
+            let colCount = 0;
+            let descriptionIndex = -1;
+
+            // First pass: identify description cell position and count columns
+            for (let i = 0; i < row.bids.length; i++) {
+                if (row.bids[i].type === 'description') {
+                    descriptionIndex = i;
+                    break;
+                }
+                colCount++;
+            }
+
+            // Second pass: render cells with proper colspan for description
+            for (let i = 0; i < row.bids.length; i++) {
+                const bid = row.bids[i];
                 let cellClass = '';
                 let cellContent = bid.text;
+                let colspan = 1;
 
-                // Determine cell styling - Opener BLUE, Responder GREEN
+                // Determine cell styling - Opener GREEN, Responder BLUE
                 switch (bid.type) {
                     case 'opener':
-                        cellClass = 'opener-cell'; // Blue background #dbeafe
+                        cellClass = 'opener-cell'; // Green background #d1fae5
                         break;
                     case 'responder':
-                        cellClass = 'responder-cell'; // Green background #d1fae5
+                        cellClass = 'responder-cell'; // Blue background #dbeafe
                         break;
                     case 'description':
                         cellClass = 'description-cell';
+                        // Description cell spans remaining columns
+                        colspan = maxCols - colCount;
                         break;
                     case 'empty':
                         cellClass = 'empty-cell';
@@ -502,7 +532,8 @@ class BridgeSystem {
 
                 // Convert bridge notation and apply cell styling
                 const convertedContent = this.convertBridgeNotation(cellContent);
-                html.push(`<td class="auction-cell ${cellClass}">${convertedContent}</td>`);
+                const colspanAttr = colspan > 1 ? ` colspan="${colspan}"` : '';
+                html.push(`<td class="auction-cell ${cellClass}"${colspanAttr}>${convertedContent}</td>`);
             }
 
             html.push('</tr>');
@@ -693,9 +724,27 @@ class BridgeSystem {
         // Show Level B panel
         levelBPanel.style.display = 'flex';
 
-        // Set title with tooltip
-        const shortTitle = this.getSmartTitle(title);
-        levelBTitle.textContent = shortTitle;
+        // Split title at colon to extract subtitle for Level B
+        let mainTitle = title;
+        let subtitleText = null;
+
+        if (title.includes(': ')) {
+            const parts = title.split(': ');
+            mainTitle = parts[0];
+            subtitleText = parts.slice(1).join(': ');
+        }
+
+        const shortTitle = this.getSmartTitle(mainTitle);
+
+        // Create consolidated header with subtitle in green tile
+        if (subtitleText) {
+            levelBTitle.innerHTML = `
+                <div class="title-main">${this.convertBridgeNotation(shortTitle)}</div>
+                <div class="title-subtitle">${this.convertBridgeNotation(subtitleText)}</div>
+            `;
+        } else {
+            levelBTitle.textContent = shortTitle;
+        }
         levelBTitle.title = title; // Tooltip shows full title on hover
 
         levelBContent.innerHTML = content;
@@ -753,7 +802,7 @@ class BridgeSystem {
     }
 
     generateSequenceHTML(sequence) {
-        let html = [`<h4>${sequence.title}</h4>`];
+        let html = [];
 
         if (sequence.auction) {
             html.push('<div class="auction-sequence">');

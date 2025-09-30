@@ -32,7 +32,7 @@ class CustomHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
 
         super().end_headers()
 
-def start_server(port=8000):
+def start_server(port=9999):
     """Start a local HTTP server"""
 
     # Change to the base directory
@@ -56,8 +56,8 @@ if __name__ == "__main__":
     import argparse
 
     parser = argparse.ArgumentParser(description='Start Uma + PS Bridge System server')
-    parser.add_argument('--port', '-p', type=int, default=8000,
-                        help='Port to run the server on (default: 8000)')
+    parser.add_argument('--port', '-p', type=int, default=9999,
+                        help='Port to run the server on (default: 9999)')
 
     args = parser.parse_args()
     start_server(args.port)

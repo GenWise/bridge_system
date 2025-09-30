@@ -371,7 +371,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c2h? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c2h?",
             "type": "auction_table",
             "data": {
               "header": "1c2h?",
@@ -461,7 +461,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c2n? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c2n?",
             "type": "auction_table",
             "data": {
               "header": "1c2n?",
@@ -504,7 +504,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c2s? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c2s?",
             "type": "auction_table",
             "data": {
               "header": "1c2s?",
@@ -581,7 +581,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c2c? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c2c?",
             "type": "auction_table",
             "data": {
               "header": "1c2c?",
@@ -630,7 +630,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c2d? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c2d?",
             "type": "auction_table",
             "data": {
               "header": "1c2d?",
@@ -676,7 +676,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1d1n? (opener #dbeafe, responder #d1fae5)",
+            "title": "1c1d1n?",
             "type": "auction_table",
             "data": {
               "header": "1c1d1n?",
@@ -790,7 +790,7 @@
                   "bids": [
                     {"text": "", "type": "empty"},
                     {"text": "3c", "type": "opener"},
-                    {"text": "Forced", "type": "description"}
+                    {"text": "Puppetted bid", "type": "description"}
                   ]
                 },
                 {
@@ -847,7 +847,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1d2n when non vul? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c1d2n when non vul?",
             "type": "auction_table",
             "data": {
               "header": "1c1d2n when non vul?",
@@ -862,7 +862,7 @@
                   "bids": [
                     {"text": "", "type": "empty"},
                     {"text": "3d", "type": "opener"},
-                    {"text": "Forced", "type": "description"}
+                    {"text": "Puppetted bid", "type": "description"}
                   ]
                 },
                 {
@@ -919,7 +919,7 @@
       "content": {
         "sections": [
           {
-            "title": "Responder rebids on 1c1d2c? (opener #d1fae5, responder #dbeafe)",
+            "title": "Responder rebids on 1c1d2c?",
             "type": "auction_table",
             "data": {
               "header": "1c1d2c?",
@@ -968,7 +968,7 @@
       "content": {
         "sections": [
           {
-            "title": "Responder rebids on 1c1d2n when vul? (opener #dbeafe, responder #d1fae5)",
+            "title": "Responder rebids on 1c1d2n when vul?",
             "type": "auction_table",
             "data": {
               "header": "1c1d2n when vul?",
@@ -1011,7 +1011,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1d2h when non vul (artificial reverse)? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c1d2h when non vul (artificial reverse)?",
             "type": "auction_table",
             "data": {
               "header": "1c1d2h when non vul?",
@@ -1102,7 +1102,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1d2h when vul (natural reverse) GF? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c1d2h when vul (natural reverse) GF?",
             "type": "auction_table",
             "data": {
               "header": "1c1d2h when vul GF?",
@@ -1174,7 +1174,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1d2s (natural reverse) GF? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c1d2s (natural reverse) GF?",
             "type": "auction_table",
             "data": {
               "header": "1c1d2s GF?",
@@ -1246,7 +1246,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1d1h? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c1d1h?",
             "type": "auction_table",
             "data": {
               "header": "1c1d1h?",
@@ -1261,7 +1261,7 @@
                   "bids": [
                     {"text": "", "type": "empty"},
                     {"text": "1n", "type": "opener"},
-                    {"text": "Forced", "type": "description"}
+                    {"text": "Puppetted bid", "type": "description"}
                   ]
                 },
                 {
@@ -1290,7 +1290,7 @@
             }
           },
           {
-            "title": "1c1d1M? (opener #dbeafe, responder #d1fae5)",
+            "title": "1c1d1M?",
             "type": "auction_table",
             "data": {
               "header": "1c1d1M?",
@@ -1390,7 +1390,7 @@
                   "bids": [
                     {"text": "", "type": "empty"},
                     {"text": "3c", "type": "opener"},
-                    {"text": "Forced", "type": "description"}
+                    {"text": "Puppetted bid", "type": "description"}
                   ]
                 },
                 {
@@ -1453,7 +1453,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1M1n? (opener #dbeafe, responder #d1fae5)",
+            "title": "1c1M1n?",
             "type": "auction_table",
             "data": {
               "header": "1c1M1n?",
@@ -1468,7 +1468,7 @@
                   "bids": [
                     {"text": "", "type": "empty"},
                     {"text": "2d", "type": "opener"},
-                    {"text": "Forced", "type": "description"}
+                    {"text": "Puppetted bid", "type": "description"}
                   ]
                 },
                 {
@@ -1555,7 +1555,7 @@
                   "bids": [
                     {"text": "", "type": "empty"},
                     {"text": "3c", "type": "opener"},
-                    {"text": "Forced", "type": "description"}
+                    {"text": "Puppetted bid", "type": "description"}
                   ]
                 },
                 {
@@ -1612,7 +1612,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1M2n when non vul (opener #dbeafe, responder #d1fae5)",
+            "title": "1c1M2n when non vul",
             "type": "auction_table",
             "data": {
               "header": "1c1M2n when non vul",
@@ -1655,7 +1655,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1M2c? (opener #d1fae5, responder #dbeafe)",
+            "title": "1c1M2c?",
             "type": "auction_table",
             "data": {
               "header": "1c1M2c?",
@@ -1956,7 +1956,7 @@
       "content": {
         "sections": [
           {
-            "title": "Responder rebids on 1m1h1s? (opener #dbeafe, responder #d1fae5)",
+            "title": "Responder rebids on 1m1h1s?",
             "type": "auction_table",
             "data": {
               "header": "1c1h1s?",
@@ -2207,7 +2207,7 @@
       "content": {
         "sections": [
           {
-            "title": "1c1s2s? (opener #dbeafe, responder #d1fae5)",
+            "title": "1c1s2s?",
             "type": "auction_table",
             "data": {
               "header": "1c1s2s?",

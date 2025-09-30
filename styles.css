@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    font-size: 12px;
-    line-height: 1.35;
+    font-size: 11px;
+    line-height: 1.3;
     color: #333;
     background-color: #f8f9fa;
 }
@@ -158,6 +158,19 @@ body {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
+}
+
+.title-main {
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.title-subtitle {
+    font-weight: 400;
+    font-size: 0.7rem;
+    color: #6b7280;
+    line-height: 1.3;
 }
 
 /* Navigation elements in panel header */
@@ -706,38 +719,38 @@ body {
     font-size: 0.9em;
 }
 
-/* Table Cell Backgrounds - Blue for Opener, Green for Responder */
+/* Table Cell Backgrounds - GREEN for Opener, BLUE for Responder */
 .opener-bid, .opener-cell {
-    background: #dbeafe !important;
-    color: #1e40af !important;
-}
-
-.responder-bid, .responder-cell {
     background: #d1fae5 !important;
     color: #065f46 !important;
 }
 
-/* Ensure bid cells have consistent styling */
-.bridge-table .opener-cell {
-    background-color: #dbeafe !important;
+.responder-bid, .responder-cell {
+    background: #dbeafe !important;
     color: #1e40af !important;
 }
 
-.bridge-table .responder-cell {
+/* Ensure bid cells have consistent styling */
+.bridge-table .opener-cell {
     background-color: #d1fae5 !important;
     color: #065f46 !important;
+}
+
+.bridge-table .responder-cell {
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
 }
 
 /* Specific styling for bid column */
 .bridge-table .bid-cell.opener-cell {
-    background-color: #dbeafe !important;
-    color: #1e40af !important;
+    background-color: #d1fae5 !important;
+    color: #065f46 !important;
     font-weight: bold;
 }
 
 .bridge-table .bid-cell.responder-cell {
-    background-color: #d1fae5 !important;
-    color: #065f46 !important;
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
     font-weight: bold;
 }
 
@@ -825,10 +838,10 @@ body {
 }
 
 .auction-table .auction-title {
-    padding: 0.4rem 0.6rem;
+    padding: 0.3rem 0.5rem;
     text-align: center;
     font-weight: bold;
-    font-size: 1.05em;
+    font-size: 1em;
 }
 
 /* Defensive reset for all table cells */
@@ -840,13 +853,13 @@ body {
 }
 
 .auction-table .auction-cell {
-    padding: 0.1rem 0.25rem;
+    padding: 0.05rem 0.2rem;
     text-align: center;
     border-right: 1px solid #6b7280;
     border-bottom: 1px solid #6b7280;
     vertical-align: middle;
     line-height: 1.05;
-    height: 24px;
+    height: 22px;
 }
 
 .auction-table .auction-cell:last-child {
@@ -857,10 +870,10 @@ body {
     border-bottom: none;
 }
 
-/* Auction table cell styling - Opener BLUE, Responder GREEN - Fixed narrow widths */
+/* Auction table cell styling - Opener GREEN, Responder BLUE - Fixed narrow widths */
 .auction-table .opener-cell {
-    background-color: #dbeafe !important;
-    color: #1e40af !important;
+    background-color: #d1fae5 !important;
+    color: #065f46 !important;
     font-weight: bold;
     width: 50px;
     min-width: 50px;
@@ -868,8 +881,8 @@ body {
 }
 
 .auction-table .responder-cell {
-    background-color: #d1fae5 !important;
-    color: #065f46 !important;
+    background-color: #dbeafe !important;
+    color: #1e40af !important;
     font-weight: bold;
     width: 50px;
     min-width: 50px;
@@ -888,7 +901,8 @@ body {
     text-overflow: clip;
     word-break: normal;
     overflow-wrap: anywhere;
-    padding: 0 6px;
+    padding: 0 5px;
+    font-size: 0.95em;
 }
 
 .auction-table .empty-cell {
